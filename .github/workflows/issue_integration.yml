@@ -10,4 +10,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Notify
-              run: echo "GitHub action invoked by "${{github.event.issues[0].labels}}
+              run: echo "GitHub action invoked by "${{ github.context.payload.issue }}
