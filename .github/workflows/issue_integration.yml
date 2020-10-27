@@ -1,0 +1,13 @@
+name: Issue Integration Action
+
+on:
+    issues:
+        types: [opened, edited, closed, reopened]
+
+jobs:
+    notify_bugfix_hotfix_request:
+        if: ""
+        runs-on: ubuntu-latest
+        steps:
+            - name: Notify
+              run: echo "GitHub action invoked by "${{github.event.issues[0].labels}}
