@@ -10,4 +10,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Notify
-              run: echo "::debug::Variable ${{ github.event.issues.action }}"
+              run: echo "::debug::Variable ${{ github.issues.action }}"
